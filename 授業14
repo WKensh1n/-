@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Position演習</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>新着商品</h1>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="商品のサンプル画像">
+        
+        <span class="badge">NEW</span>
+    </div>
+
+</body>
+</html>
+
+
+<style>
+.card {
+    /* バッジをabsoluteで配置するための基準点にする */
+    position: relative;
+    
+    /* カード全体の幅（画像もこれに収まる） */
+    width: 400px;
+    
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* カードの角丸からはみ出た部分を隠す */
+}
+
+.card img {
+    max-width: 100%;
+    display: block;
+}
+
+.badge {
+    /* 親要素(.card)を基準に絶対位置で配置 */
+    position: absolute;
+
+    /* 位置の指定 */
+    top: 15px; /* 親要素の上から15px */
+    left: 15px; /* 親要素の左から15px */
+
+    /* バッジ自体のデザイン */
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+</style>
